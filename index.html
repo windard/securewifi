@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Secure WIFI</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/onepage-scroll.css">
+  </head>
+<body>
+    <nav class='navbar navbar-inverse navbar-fixed-top'>
+        <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="#" class="navbar-brand"><img src="images/headlogo.png" alt="headlogo"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+              <ul class="nav navbar-nav" role="tablist">
+                <li><a class="scroll" href="#home">Home</a></li>
+                <li><a class="scroll" href="#intro">简介</a></li>
+                <li><a class="scroll" href="#func">功能</a></li>
+                <li><a class="scroll" href="#down">下载</a></li>
+                <li><a class="scroll" href="#contact">联系</a></li>
+              </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container main">
+        <section class="one" id="home">
+            <div class="back-wall container-fluid">
+                <div class="container">
+                    <div class="row">
+                            <div class="instance col-md-8">
+                                <div class="phone left-phone">
+                                    <img src="images/secure.png" alt="secureWIFI" class="left-phone">
+                                </div>
+                                <div class="phone right-phone">
+                                    <img src="images/secure.png" alt="secureWIFI" class="right-phone">
+                                </div>
+                            </div>
+                            <div class="download col-md-4">
+                            <div class="container-fluid">
+                                <div class="product">
+                                    <h1>SECTURE WIFI</h1>
+                                    <br>
+                                    <img src="images/logo.png" alt="logo">
+                                    <h2>安全上网&nbsp;&nbsp;&nbsp;一键启动</h2>
+                                    <br>
+                                    <a href="#" class="btn btn-info btn-lg">点击下载</a>
+                                </div>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="intro">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="brief-intro row">
+                        <div class="left-brief col-md-5">
+                            <img src="images/wifi.jpg" alt="wifi">
+                        </div>
+                        <div class="right-brief col-md-7">
+                            <h3>安全 WIFI</h3>
+                            <p>截至2015年12月，91.8%的网民最近半年曾通过Wi-Fi无线网络接入互联网。随着“智慧城市”、“无线城市”建设的大力开展，政府与企业合作推进城市公共场所、公共交通工具的无线网络部署，公共区域无线网络日益普及；手机、平板电脑、智能电视等无线终端促进了家庭无线网络的使用，Wi-Fi无线网络成为网民在固定场所下的首选接入方式。</p>
+                            <p>但由此引发的网银账号被盗、个人信息泄露等案件也成逐年上涨趋势。</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="func">
+            <h1>1</h1>
+
+        </section>
+        <section id="down">
+            <h1>1</h1>
+
+        </section>
+        <section id="contact">
+            <h1>1</h1>
+
+        </section>
+
+    </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.onepage-scroll.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".main").onepage_scroll();
+            if(location.hash){
+                var hash = location.hash;
+                $("a[href="+hash+"]").parent().addClass('active');
+                var index = $("section.active").data('index');
+                var next = $(hash).data('index')
+                $(".main").transformPage((next-1)*(-100),next);
+                $("section.active").removeClass('active');
+                $(hash).addClass('active');
+                $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
+                $(".onepage-pagination li a" + "[data-index='" + next + "']").addClass("active");
+            }else{
+                $("nav li").first().addClass('active');
+            };
+            $(".scroll").click(function(event){
+                event.preventDefault();
+                var index = $("section.active").data('index');
+                var next = $(this.hash).data('index')
+                $(".main").transformPage((next-1)*(-100),next);
+                $("section.active").removeClass('active');
+                $(this.hash).addClass('active');
+                $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
+                $(".onepage-pagination li a" + "[data-index='" + next + "']").addClass("active");
+            });
+        })
+    </script>
+</body>
+</html>
