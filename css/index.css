@@ -4,7 +4,7 @@ body{
     font-family:"Helvetica Neue",MicroSoft YaHei, Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 .navbar-brand img{
-    margin-top: -5px;
+    margin-top: -7px;
     width:35px;
     height:35px;
 }
@@ -37,16 +37,35 @@ section .container-fluid{
     .phone{
         display: none;
     }
+    .thumbnail{
+        padding-top: 4px !important;
+    }
+    .thumbnail img{
+        display: none !important;
+    }
+    .thumbnail .desktop{
+        display: none;
+    }
+    .thumbnail .pad{
+        display: block !important;
+    }
 }
 @media (max-width: 768px) {
     .product{
-        margin-top: 60px !important;
+        margin-top: 30px !important;
     }
     .phone{
         display: none;
     }
     h2{
         font-size: 24px;
+    }
+    h3{
+        font-size: 18px !important;
+        margin-top: 10px !important;
+    }
+    .func{
+        margin-top: 30px !important;
     }
 }
 .phone img{
@@ -67,15 +86,15 @@ section .container-fluid{
     color: white;
 }
 .product{
-    text-align: center;
-    margin-top: 100px;
+    /*text-align: center;*/
+    margin-top: 80px;
 }
 .product img{
     width:80px;
     height:80px;
 }
 .brief-intro .left-brief{
-    text-align: center;
+    /*text-align: center;*/
     padding-top: 100px;
 }
 .brief-intro .left-brief img{
@@ -86,4 +105,22 @@ section .container-fluid{
 .brief-intro .right-brief{
     color: white;
     padding-top: 60px;
+}
+.thumbnail img{
+    width:200px;
+    height: 200px;
+    border-radius: 100px;
+    box-sizing: content-box;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.func{
+    margin-top: 60px;
+}
+.thumbnail {
+    padding-top:10px;
+    box-shadow: 0px 0px 10px #fff;
+}
+.thumbnail .pad{
+    display: none;
 }

@@ -41,15 +41,15 @@
                     <div class="row">
                             <div class="instance col-md-8">
                                 <div class="phone left-phone">
-                                    <img src="images/secure.png" alt="secureWIFI" class="left-phone">
+                                    <img src="images/secure_close.jpg" alt="secureWIFI" class="left-phone">
                                 </div>
                                 <div class="phone right-phone">
-                                    <img src="images/secure.png" alt="secureWIFI" class="right-phone">
+                                    <img src="images/secure_open.jpg" alt="secureWIFI" class="right-phone">
                                 </div>
                             </div>
                             <div class="download col-md-4">
                             <div class="container-fluid">
-                                <div class="product">
+                                <div class="product text-center">
                                     <h1>SECTURE WIFI</h1>
                                     <br>
                                     <img src="images/logo.png" alt="logo">
@@ -67,14 +67,15 @@
             <div class="container-fluid">
                 <div class="container">
                     <div class="brief-intro row">
-                        <div class="left-brief col-md-5">
+                        <div class="left-brief col-md-5 text-center">
                             <img src="images/wifi.jpg" alt="wifi">
                         </div>
                         <div class="right-brief col-md-7">
-                            <h3>安全 WIFI</h3>
-                            <p>截至2015年12月，91.8%的网民最近半年曾通过Wi-Fi无线网络接入互联网。随着“智慧城市”、“无线城市”建设的大力开展，政府与企业合作推进城市公共场所、公共交通工具的无线网络部署，公共区域无线网络日益普及；手机、平板电脑、智能电视等无线终端促进了家庭无线网络的使用，Wi-Fi无线网络成为网民在固定场所下的首选接入方式。</p>
-                            <p>但由此引发的网银账号被盗、个人信息泄露等案件也成逐年上涨趋势。</p>
-                            <p></p>
+                            <h2>安全 Wi-Fi</h2>
+                            <br>
+                            <p>随着新一代信息技术快速发展和广泛应用，城市公共热点地区 Wi-Fi (Public WLAN) 已成为推动城市信息基础设施建设的重要举措，但其安全问题也日益凸显</p>
+                            <p>由不安全的 Wi-Fi 引发的网银账号被盗、个人信息泄露等案件呈现逐年上涨趋势，WiFi 安全不容忽视。</p>
+                            <p>基于以上问题，本方案以保护在公共 Wi-Fi 环境下的用户数据为主要目的，基于客户端与服务器多通道通信，对认证服务器和数据服务器数据传输都采用强加密算法，在客户端采用端口转发技术，加大攻击者攻击成本，从而保证用户安全。</p>
                         </div>
                     </div>
                 </div>
@@ -82,7 +83,58 @@
 
         </section>
         <section id="func">
-            <h1>1</h1>
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row func">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="thumbnail">
+                                <img src="images/func1.jpg" alt="func1">
+                                <div class="caption">
+                                    <h3>防嗅探</h3>
+                                    <p class="desktop">用 RSA 2048 Bits 加密方式对用户登陆进行加密，用 AES-CFB 模式对用户数据进行加密，攻击者虽可以嗅探到用户的数据，但是解密难度大等原因在很大程度上加大攻击成本，可使攻击者放弃继续攻击。</p>
+                                    <p class="pad">采用强加密方式，嗅到数据难以解密</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="thumbnail">
+                                <img src="images/func2.png" alt="func1">
+                                <div class="caption">
+                                    <h3>防中间人攻击</h3>
+                                    <p class="desktop">一方面中键人拦截到的数据难以解密，且密钥传输过程中难以被中间人攻击。另一方面客户端与服务器端通信使用特定的认证方式，并且客户端经由服务器端认证，而中间人难以模拟该认证方式</p>
+                                    <p class="pad">
+                                        难以解密数据，而且特定认证方式
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="thumbnail">
+                                <img src="images/func3.png" alt="func1">
+                                <div class="caption">
+                                    <h3>防伪 AP 钓鱼</h3>
+                                    <p class="desktop">客户端与服务器端使用特定认证方式，而攻击者搭建的伪 AP 不能实现同种认证，因此即使用户连接上钓鱼 AP ，也会因认证方式不符，而无法实现客户端同服务器端的认证，从而实现防止用户被伪 AP 钓鱼攻击。</p>
+                                    <p class="pad">
+                                        特定认证方式，伪 AP 无法复现
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="thumbnail">
+                                <img src="images/func4.png" alt="func1">
+                                <div class="caption">
+                                    <h3>高效方便且安全性高</h3>
+                                    <p class="desktop">加密数据的密钥由客户端生成，速度客观。一方面，算法处理速度较快，保证数据的正常传输，另一方面由于密钥实在客户端生成，在一定程度上避免了当认证服务器被攻陷等特殊情况发生时，攻击者的进一步攻击。</p>
+                                    <p class="pad">
+                                        客户端生成密钥，安全可靠
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </section>
         <section id="down">
